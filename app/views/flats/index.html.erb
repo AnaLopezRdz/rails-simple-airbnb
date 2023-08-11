@@ -1,29 +1,31 @@
-<div class="container">
-  <h1> All our flats (<%= @flats.length %>)</h1>
-  <div class="flex-container">
-    <% @flats.each do |flat| %>
-        <div class="card-product">
-          <div class="flat-content">
-              <h2><%= link_to flat.name, flat_path(flat) %></h2>
-              <p><%= flat.address %></p>
-              <p><%= flat.description %></p>
-              <img src="<%= flat.picture_url %>" alt="bonito">
+<div class="container w-100">
+      <h1> All our flats (<%= @flats.length %>)</h1>
+      <div class="d-flex row">
+        <% @flats.each do |flat| %>
+            <div class="col-md-4 card-product">
+              <div class="flat-content">
+                <div class="width: 100%;">
+                  <img style="object-fit:cover; width:100%; height: 200px; "src="<%= flat.picture_url %>" alt="bonito">
+                </div>
+                  <h2><%= link_to flat.name, flat_path(flat) %></h2>
+                  <p><%= flat.address %></p>
+                  <p><%= flat.description %></p>
 
-              <p class="flat-number-infos"><i class="fa-solid fa-users"></i>    <%= flat.number_of_guests %> <i class="fa-solid fa-euro-sign"></i> <%= flat.price_per_night %></p>
-          </div>
-          <div class="flat-card-actions">
-            <p>
-              <%= link_to "More info", flat_path(flat) %>
-              <%= link_to "Edit", edit_flat_path(flat), class: "ms-3 text-warning" %>
-              <%= link_to "Delete",
-                flat_path(flat),
-                data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
-                class: "ms-3 text-danger"
-              %>
-            </p>
-          </div>
-        </div>
+                  <p class="flat-number-infos"><i class="fa-solid fa-users"></i>    <%= flat.number_of_guests %> <i class="fa-solid fa-euro-sign"></i> <%= flat.price_per_night %></p>
+              </div>
+              <hr>
+              <div class="flat-card-actions">
+                  <%= link_to "More info", flat_path(flat) %>
+                  <%= link_to "Edit", edit_flat_path(flat), class: "ms-3 text-warning" %>
+                  <%= link_to "Delete",
+                    flat_path(flat),
+                    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+                    class: "ms-3 text-danger"
+                  %>
 
-    <% end  %>
-  </div>
+              </div>
+            </div>
+
+        <% end  %>
+      </div>
 </div>
