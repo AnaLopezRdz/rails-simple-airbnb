@@ -38,6 +38,7 @@
 .flat-show-card{
   background-color: rgb(235, 236, 236);
   border-radius: 3px;
+  margin-bottom: 15px;
 
 }
 .card-pad{
@@ -55,4 +56,8 @@
 }
 .div-on-top{
   margin-top: -5%;
+}
+.box-pad{
+  padding:5%;
+
 }
