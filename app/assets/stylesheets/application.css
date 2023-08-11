@@ -29,7 +29,7 @@
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 .back-pic{
-background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .flat-content{
@@ -37,7 +37,13 @@ background-repeat: no-repeat;
 }
 .flat-show-card{
   background-color: rgb(235, 236, 236);
+  border-radius: 3px;
+
 }
+.card-pad{
+  padding-left: 5%;
+}
+
 .flex-share{
   display: flex;
   align-items: center;
@@ -46,4 +52,7 @@ background-repeat: no-repeat;
 .space-left{
   display: flex;
 
+}
+.div-on-top{
+  margin-top: -5%;
 }
